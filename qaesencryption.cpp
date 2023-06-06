@@ -171,7 +171,7 @@ QByteArray QAESEncryption::getPadding(int currSize, int alignment)
 
 QByteArray QAESEncryption::expandKey(const QByteArray &key, bool isEncryptionKey)
 {
-
+    Q_UNUSED(isEncryptionKey);
 #ifdef USE_INTEL_AES_IF_AVAILABLE
     if (m_aesNIAvailable){
           switch(m_level) {
